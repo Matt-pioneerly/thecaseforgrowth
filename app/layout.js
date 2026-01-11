@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, TrendingUp, Brain, CheckSquare, Users, Calendar } from 'lucide-react';
 import './globals.css';
 
 export default function RootLayout({ children }) {
@@ -63,7 +63,7 @@ function Navigation() {
 
                   {/* Featured Pages */}
                   <div className="border-t border-slate-200 pt-3 mb-3">
-                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide px-3 mb-2">Featured Pages</div>
+                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide px-3 mb-2">Featured</div>
                     
                     <Link href="/ai-prompts" className="flex items-center gap-3 p-3 rounded-lg hover:bg-orange-50 transition">
                       <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -72,8 +72,8 @@ function Navigation() {
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-slate-900 text-sm">AI Prompts for Legal Research</div>
-                        <div className="text-xs text-slate-600">56 battle-tested prompts</div>
+                        <div className="font-semibold text-slate-900 text-sm">AI Prompts</div>
+                        <div className="text-xs text-slate-600">56 prompts for legal work</div>
                       </div>
                       <span className="px-2 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded">New</span>
                     </Link>
@@ -85,8 +85,8 @@ function Navigation() {
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-slate-900 text-sm">Law Firm Growth Calculator</div>
-                        <div className="text-xs text-slate-600">Revenue projections & forecasts</div>
+                        <div className="font-semibold text-slate-900 text-sm">Growth Calculator</div>
+                        <div className="text-xs text-slate-600">Revenue projections</div>
                       </div>
                     </Link>
 
@@ -97,24 +97,103 @@ function Navigation() {
                         </svg>
                       </div>
                       <div className="flex-1">
-                        <div className="font-semibold text-slate-900 text-sm">AI Sophistication Assessment</div>
-                        <div className="text-xs text-slate-600">Evaluate your AI readiness</div>
+                        <div className="font-semibold text-slate-900 text-sm">AI Assessment</div>
+                        <div className="text-xs text-slate-600">Evaluate your readiness</div>
                       </div>
                     </Link>
                   </div>
 
-                  {/* Quick Access Resources */}
+                  {/* All Categories */}
                   <div className="border-t border-slate-200 pt-3">
-                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide px-3 mb-2">Popular Downloads</div>
-                    <div className="grid grid-cols-2 gap-2 px-3">
-                      <div className="text-xs text-slate-700 py-2 px-2 bg-slate-50 rounded">📋 Client Intake</div>
-                      <div className="text-xs text-slate-700 py-2 px-2 bg-slate-50 rounded">📊 Marketing Budget</div>
-                      <div className="text-xs text-slate-700 py-2 px-2 bg-slate-50 rounded">⚡ Lead Conversion</div>
-                      <div className="text-xs text-slate-700 py-2 px-2 bg-slate-50 rounded">📈 SEO Checklist</div>
+                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide px-3 mb-2">By Category</div>
+
+                    <div className="grid grid-cols-2 gap-2 px-2">
+                      <Link href="/resources" className="text-left p-3 hover:bg-blue-50 rounded-lg transition-all group">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="w-6 h-6 bg-blue-100 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-blue-200 transition-all">
+                            <TrendingUp className="w-3 h-3 text-blue-600" />
+                          </div>
+                          <span className="text-sm font-semibold text-slate-900 group-hover:text-blue-600 transition-all">Marketing</span>
+                        </div>
+                        <div className="text-xs text-slate-600">Client acquisition</div>
+                      </Link>
+
+                      <Link href="/resources" className="text-left p-3 hover:bg-purple-50 rounded-lg transition-all group">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="w-6 h-6 bg-purple-100 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-purple-200 transition-all">
+                            <Brain className="w-3 h-3 text-purple-600" />
+                          </div>
+                          <span className="text-sm font-semibold text-slate-900 group-hover:text-purple-600 transition-all">AI Tools</span>
+                        </div>
+                        <div className="text-xs text-slate-600">Implementation</div>
+                      </Link>
+
+                      <Link href="/resources" className="text-left p-3 hover:bg-green-50 rounded-lg transition-all group">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-all">
+                            <CheckSquare className="w-3 h-3 text-green-600" />
+                          </div>
+                          <span className="text-sm font-semibold text-slate-900 group-hover:text-green-600 transition-all">Operations</span>
+                        </div>
+                        <div className="text-xs text-slate-600">Efficiency</div>
+                      </Link>
+
+                      <Link href="/resources" className="text-left p-3 hover:bg-orange-50 rounded-lg transition-all group">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="w-6 h-6 bg-orange-100 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-orange-200 transition-all">
+                            <Users className="w-3 h-3 text-orange-600" />
+                          </div>
+                          <span className="text-sm font-semibold text-slate-900 group-hover:text-orange-600 transition-all">Business Dev</span>
+                        </div>
+                        <div className="text-xs text-slate-600">Growth strategies</div>
+                      </Link>
+
+                      <Link href="/resources" className="text-left p-3 hover:bg-amber-50 rounded-lg transition-all group">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="w-6 h-6 bg-amber-100 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-amber-200 transition-all">
+                            <Calendar className="w-3 h-3 text-amber-600" />
+                          </div>
+                          <span className="text-sm font-semibold text-slate-900 group-hover:text-amber-600 transition-all">Financial</span>
+                        </div>
+                        <div className="text-xs text-slate-600">Revenue growth</div>
+                      </Link>
                     </div>
-                    <Link href="/resources" className="block mt-3 text-center text-sm text-orange-600 hover:text-orange-700 font-semibold">
-                      View All Resources →
-                    </Link>
+                  </div>
+                  
+                  <div className="mt-3 pt-3 border-t border-slate-200">
+                    <a
+                      href="https://pioneerly.com/book-consultation"
+                      className="block m-2 rounded-lg overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 hover:from-slate-800 hover:to-slate-700 transition group"
+                    >
+                      <div className="p-4 relative">
+                        <div className="absolute top-0 right-0 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl"></div>
+                        
+                        <div className="relative">
+                          <div className="flex items-start justify-between mb-2">
+                            <div className="flex items-center gap-2">
+                              <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <Users className="w-4 h-4 text-white" />
+                              </div>
+                              <div>
+                                <div className="font-semibold text-white group-hover:text-orange-300 transition">Growth Counsel</div>
+                              </div>
+                            </div>
+                            <span className="px-2 py-0.5 bg-orange-500/20 text-orange-300 text-xs font-semibold rounded border border-orange-500/30">
+                              Premium
+                            </span>
+                          </div>
+                          <p className="text-sm text-slate-400 leading-relaxed">
+                            Personal advisor who knows your firm and delivers real results
+                          </p>
+                          <div className="mt-3 flex items-center text-orange-400 text-sm font-medium">
+                            <span>Book consultation</span>
+                            <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
               </div>

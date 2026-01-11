@@ -2,25 +2,17 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Calendar, CheckSquare, FileText, TrendingUp, Users, Zap, Lock, LogOut, Menu, X, Calculator, Brain, Heart, MapPin, Copy, Check, Download, Search, Target, Clock } from 'lucide-react';
+import { Calendar, CheckSquare, FileText, TrendingUp, Users, Zap, Brain, Heart, MapPin, Copy, Check, Download, Search, Target, Clock } from 'lucide-react';
 import AIPromptsPage from './AIPromptsPage';
 
 const TheCaseForGrowth = ({ initialPage = 'home' }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentPage, setCurrentPage] = useState(initialPage);
   const [selectedStage, setSelectedStage] = useState('solo');
   const [selectedTopic, setSelectedTopic] = useState('all');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
 
   // Image paths - These will work once you add images to public/images/ folder
   const mattPhoto = "/images/matt-photo.jpg";
   const piotrPhoto = "/images/piotr-photo.jpg";
-
-  // Close dropdown when page changes
-  React.useEffect(() => {
-    setOpenDropdown(null);
-  }, [currentPage]);
 
   // Firm stages
   const stages = [
@@ -335,60 +327,8 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
   });
 
   // Login component
-  const LoginScreen = () => (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center p-4">
-      <div className="max-w-md w-full">
-        <div className="bg-white rounded-2xl shadow-2xl p-8">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full mb-4">
-              <Heart className="w-8 h-8 text-white" />
-            </div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">The Case for Growth</h1>
-            <p className="text-slate-600">Your exclusive growth toolkit from the Pioneerly team</p>
-          </div>
-
-          {/* Clerk auth component would go here */}
-          <div className="space-y-4">
-            <div className="border-2 border-dashed border-slate-300 rounded-lg p-6 text-center">
-              <p className="text-slate-600 mb-4">🔐 Clerk Auth Component Here</p>
-              <p className="text-sm text-slate-500 mb-4">
-                Add your Clerk publishableKey and replace this with:
-                <code className="block mt-2 text-xs bg-slate-100 p-2 rounded">
-                  &lt;SignIn /&gt;
-                </code>
-              </p>
-            </div>
-            
-            {/* Demo button - remove in production */}
-            <button
-              onClick={() => setIsAuthenticated(true)}
-              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-3 rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition"
-            >
-              Demo Login (Remove in Production)
-            </button>
-          </div>
-
-          <div className="mt-8 pt-8 border-t border-slate-200">
-            <p className="text-sm text-slate-600 text-center">
-              Not subscribed yet?{' '}
-              <a href="https://pioneerly.com" className="text-orange-600 hover:text-orange-700 font-semibold">
-                Join our newsletter
-              </a>
-            </p>
-            <p className="text-xs text-slate-500 mt-4 text-center flex items-center justify-center gap-1">
-              Built with <Heart className="w-3 h-3 text-orange-500" /> in Miami • Austin • New York
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
-  // Main app
-  if (!isAuthenticated) {
-    return <LoginScreen />;
-  }
-
+  // Main app - removed authentication
+  // Users can always access content
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Page Content */}
