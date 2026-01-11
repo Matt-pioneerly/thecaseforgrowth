@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Calendar, CheckSquare, FileText, TrendingUp, Users, Zap, Brain, Heart, MapPin, Copy, Check, Download, Search, Target, Clock } from 'lucide-react';
+import { Calendar, CheckSquare, FileText, TrendingUp, Users, Zap, Brain, Heart, MapPin, Copy, Check, Download, Search, Target, Clock, Calculator } from 'lucide-react';
 import AIPromptsPage from './AIPromptsPage';
 
 const TheCaseForGrowth = ({ initialPage = 'home' }) => {
