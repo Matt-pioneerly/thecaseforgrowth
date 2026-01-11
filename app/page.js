@@ -1,9 +1,39 @@
 'use client';
 
+import { useEffect } from 'react';
+import { useAuth } from '@clerk/nextjs';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { Lock, TrendingUp, Brain, Calculator, CheckCircle, Zap, Users } from 'lucide-react';
 
 export default function PublicLandingPage() {
+  const { isSignedIn, isLoaded } = useAuth();
+  const router = useRouter();
+
+  // Redirect signed-in users to resources
+  useEffect(() => {
+    if (isLoaded && isSignedIn) {
+      router.push('/resources');
+    }
+  }, [isLoaded, isSignedIn, router]);
+
+  // Show loading while checking auth
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 to-white">
+        <div className="text-center">
+          <div className="w-16 h-16 border-4 border-orange-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <p className="text-slate-600">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // Don't render landing page if signed in (will redirect)
+  if (isSignedIn) {
+    return null;
+  }
+
   const featuredResources = [
     {
       id: 1,
