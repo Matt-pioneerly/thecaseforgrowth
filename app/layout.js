@@ -38,6 +38,10 @@ function Navigation() {
             <Link href="/" className="text-slate-700 hover:text-orange-600 transition">
               Home
             </Link>
+
+            <Link href="/newsletter" className="text-slate-700 hover:text-orange-600 transition">
+              Newsletter
+            </Link>
             
             {/* Show Resources dropdown only when signed in */}
             <SignedIn>
@@ -249,6 +253,9 @@ function Navigation() {
             <Link href="/" className="block py-2 text-slate-700 hover:text-orange-600">
               Home
             </Link>
+            <Link href="/newsletter" className="block py-2 text-slate-700 hover:text-orange-600">
+              Newsletter
+            </Link>
             <SignedIn>
               <Link href="/resources" className="block py-2 text-slate-700 hover:text-orange-600">
                 Resources
@@ -299,6 +306,9 @@ function Footer() {
             Resources and tools to help law firms scale with AI and marketing
           </p>
           <div className="flex justify-center gap-6 mb-6">
+            <Link href="/newsletter" className="text-slate-400 hover:text-white transition">
+              Newsletter
+            </Link>
             <SignedIn>
               <Link href="/resources" className="text-slate-400 hover:text-white transition">
                 Resources

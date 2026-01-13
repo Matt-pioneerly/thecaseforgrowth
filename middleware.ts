@@ -1,19 +1,14 @@
-const isPublicRoute = createRouteMatcher([
-  '/',
-  '/sign-in(.*)',
-  '/sign-up(.*)',
-  '/about',
-  '/growth-calculator',
-  '/ai-calculator'
-])git commit -m "Make calculators public and improve landing page"
-git push origin mainimport { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
 // Define which routes are public (don't require authentication)
 const isPublicRoute = createRouteMatcher([
   '/',
   '/sign-in(.*)',
   '/sign-up(.*)',
-  '/about'
+  '/about',
+  '/newsletter',
+  '/growth-calculator',
+  '/ai-calculator'
 ])
 
 export default clerkMiddleware(async (auth, request) => {
