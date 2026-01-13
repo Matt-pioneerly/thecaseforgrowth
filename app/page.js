@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useAuth } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { Lock, TrendingUp, Brain, Calculator, CheckCircle, Zap, Users } from 'lucide-react';
+import { Lock, TrendingUp, Brain, Calculator, CheckCircle, Zap, Users, ArrowRight } from 'lucide-react';
 
 export default function PublicLandingPage() {
   const { isSignedIn, isLoaded } = useAuth();
@@ -42,7 +42,9 @@ export default function PublicLandingPage() {
       description: '56 battle-tested prompts for case research, document drafting, and client communication',
       icon: Brain,
       color: 'purple',
-      badge: 'New'
+      badge: 'New',
+      isFree: false, // Requires sign up
+      url: '/sign-up'
     },
     {
       id: 2,
@@ -51,30 +53,38 @@ export default function PublicLandingPage() {
       description: 'Calculate your firm\'s growth potential and identify revenue opportunities',
       icon: Calculator,
       color: 'blue',
+      isFree: true, // Free access
+      url: '/growth-calculator'
     },
     {
       id: 3,
-      title: 'Client Intake Checklist',
-      type: 'Checklist',
-      description: '15-point checklist to streamline your client onboarding process',
-      icon: CheckCircle,
-      color: 'green',
-    },
-    {
-      id: 4,
-      title: 'Marketing Budget Template',
-      type: 'Template',
-      description: 'Monthly and quarterly marketing spend template with ROI tracking',
-      icon: TrendingUp,
-      color: 'orange',
-    },
-    {
-      id: 5,
       title: 'AI Sophistication Assessment',
       type: 'Calculator',
       description: 'Assess your firm\'s AI readiness and get personalized recommendations',
       icon: Zap,
       color: 'amber',
+      isFree: true, // Free access
+      url: '/ai-calculator'
+    },
+    {
+      id: 4,
+      title: 'Client Intake Checklist',
+      type: 'Checklist',
+      description: '15-point checklist to streamline your client onboarding process',
+      icon: CheckCircle,
+      color: 'green',
+      isFree: false,
+      url: '/sign-up'
+    },
+    {
+      id: 5,
+      title: 'Marketing Budget Template',
+      type: 'Template',
+      description: 'Monthly and quarterly marketing spend template with ROI tracking',
+      icon: TrendingUp,
+      color: 'orange',
+      isFree: false,
+      url: '/sign-up'
     },
   ];
 
@@ -128,7 +138,7 @@ export default function PublicLandingPage() {
             Preview Our Resources
           </h2>
           <p className="text-lg text-slate-600">
-            Sign up free to unlock all 30+ resources
+            Try our free calculators or sign up to unlock all 30+ resources
           </p>
         </div>
 
@@ -144,43 +154,58 @@ export default function PublicLandingPage() {
             };
 
             return (
-              <div
+              <Link
                 key={resource.id}
+                href={resource.url}
                 className="bg-white rounded-xl border-2 border-slate-200 p-6 hover:border-orange-300 transition group relative overflow-hidden"
               >
-                {/* Lock overlay */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/80 to-white/95 flex items-end justify-center pb-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Link
-                    href="/sign-up"
-                    className="px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold hover:from-orange-600 hover:to-orange-700 transition shadow-lg flex items-center gap-2"
-                  >
-                    <Lock className="w-4 h-4" />
-                    Sign Up to Access
-                  </Link>
-                </div>
-
-                <div className="relative">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-12 h-12 rounded-lg ${colorClasses[resource.color]} flex items-center justify-center flex-shrink-0`}>
-                      <Icon className="w-6 h-6" />
-                    </div>
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-12 h-12 rounded-lg ${colorClasses[resource.color]} flex items-center justify-center flex-shrink-0`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <div className="flex flex-col items-end gap-2">
                     {resource.badge && (
                       <span className="px-2 py-1 bg-orange-100 text-orange-700 text-xs font-semibold rounded">
                         {resource.badge}
                       </span>
                     )}
+                    {resource.isFree ? (
+                      <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded">
+                        Free
+                      </span>
+                    ) : (
+                      <span className="px-2 py-1 bg-slate-100 text-slate-600 text-xs font-semibold rounded flex items-center gap-1">
+                        <Lock className="w-3 h-3" />
+                        Members
+                      </span>
+                    )}
                   </div>
-                  <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">
-                    {resource.type}
-                  </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2">
-                    {resource.title}
-                  </h3>
-                  <p className="text-sm text-slate-600">
-                    {resource.description}
-                  </p>
                 </div>
-              </div>
+                <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide mb-2">
+                  {resource.type}
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-orange-600 transition">
+                  {resource.title}
+                </h3>
+                <p className="text-sm text-slate-600 mb-4">
+                  {resource.description}
+                </p>
+
+                {/* CTA Button at Bottom */}
+                <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                  {resource.isFree ? (
+                    <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 flex items-center gap-2">
+                      Try it now
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                    </span>
+                  ) : (
+                    <span className="text-sm font-semibold text-orange-600 group-hover:text-orange-700 flex items-center gap-2">
+                      Sign up to access
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition" />
+                    </span>
+                  )}
+                </div>
+              </Link>
             );
           })}
         </div>
@@ -191,7 +216,7 @@ export default function PublicLandingPage() {
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg font-semibold text-lg hover:from-orange-600 hover:to-orange-700 transition shadow-lg"
           >
             <Lock className="w-5 h-5" />
-            Unlock All Resources Free
+            Unlock All 30+ Resources Free
           </Link>
         </div>
       </div>
