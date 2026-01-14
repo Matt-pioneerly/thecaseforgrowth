@@ -57,14 +57,15 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
 
     // Marketing Resources
     {
-      id: 3,
-      title: 'Client Intake Checklist',
-      type: 'checklist',
-      stage: ['solo', 'mid'],
-      topic: 'marketing',
-      description: '15-point checklist to streamline your client onboarding process',
-      downloadUrl: '#'
-    },
+  id: 3,
+  title: 'Client Intake Checklist',
+  type: 'Checklist',
+  description: '50+ point checklist with interactive checkboxes to streamline client onboarding',
+  category: 'Operations',
+  stage: 'all',
+  downloadUrl: '/downloads/Client-Intake-Checklist.pdf',
+  isPremium: false
+},
     {
       id: 4,
       title: 'Marketing Budget Template',
