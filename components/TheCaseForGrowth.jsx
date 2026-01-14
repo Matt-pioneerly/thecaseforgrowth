@@ -67,14 +67,15 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
   isPremium: false
 },
     {
-      id: 4,
-      title: 'Marketing Budget Template',
-      type: 'template',
-      stage: ['solo', 'mid'],
-      topic: 'marketing',
-      description: 'Monthly and quarterly marketing spend template with ROI tracking',
-      downloadUrl: '#'
-    },
+  id: 4,
+  title: 'Marketing Budget Template',
+  type: 'Template',
+  description: 'Excel template with monthly/quarterly tracking and ROI calculator',
+  category: 'Marketing',
+  stage: 'all',
+  downloadUrl: '/downloads/Marketing-Budget-Template.xlsx', 
+  isPremium: false
+},
     {
       id: 5,
       title: 'Google Ads Setup Guide',
