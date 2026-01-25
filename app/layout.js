@@ -322,11 +322,8 @@ function Footer() {
             </Link>
           </div>
           <p className="text-slate-500 text-sm">
-            A project by{' '}
-            <a href="https://pioneerly.com" className="text-orange-500 hover:text-orange-400">
-              Pioneerly
-            </a>
-          </p>
+  © 2025 The Case for Growth
+</p>
         </div>
       </div>
     </footer>
