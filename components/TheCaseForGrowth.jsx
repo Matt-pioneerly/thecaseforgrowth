@@ -1016,7 +1016,15 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
                     View Resource
                   </button>
                 ) : (
-                  <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2 px-4 rounded-lg font-medium hover:from-orange-600 hover:to-orange-700 transition">
+                  <button 
+                    onClick={() => {
+                      const link = document.createElement("a");
+                      link.href = resource.downloadUrl;
+                      link.download = "";
+                      link.click();
+                    }}
+                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 text-white py-2 px-4 rounded-lg font-medium hover:from-orange-600 hover:to-orange-700 transition"
+                  >
                     Download
                   </button>
                 )}
