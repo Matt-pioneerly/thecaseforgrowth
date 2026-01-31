@@ -96,21 +96,11 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
     },
     {
       id: 7,
-      title: 'Referral Program Playbook',
-      type: 'guide',
-      stage: ['solo', 'mid'],
-      topic: 'marketing',
-      description: 'Build a referral system that brings you 3-5 new cases per month',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Referral-Program-Playbook.pdf'
     },
     {
       id: 8,
-      title: 'Social Media Content Calendar',
-      type: 'template',
-      stage: ['solo', 'mid'],
-      topic: 'marketing',
-      description: '90-day content calendar with post templates for LinkedIn and Facebook',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Social-Media-Content-Calendar.xlsx'
     },
 
     // AI Resources
@@ -220,21 +210,11 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
     // Business Development
     {
       id: 20,
-      title: 'Lead Conversion Playbook',
-      type: 'guide',
-      stage: ['solo', 'mid'],
-      topic: 'business',
-      description: 'Step-by-step framework to convert consultations into retained clients',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Lead-Conversion-Playbook.pdf'
     },
     {
       id: 21,
-      title: 'Consultation Script Template',
-      type: 'template',
-      stage: ['solo', 'mid'],
-      topic: 'business',
-      description: 'Proven consultation framework that closes 60%+ of qualified leads',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Consultation-Script-Template.pdf'
     },
     {
       id: 22,
