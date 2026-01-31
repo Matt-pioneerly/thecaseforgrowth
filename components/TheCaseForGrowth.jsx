@@ -83,7 +83,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid'],
       topic: 'marketing',
       description: 'Step-by-step guide to launching your first profitable Google Ads campaign',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Google-Ads-Setup-Guide.pdf'
     },
     {
       id: 6,
@@ -92,7 +92,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid', 'large'],
       topic: 'marketing',
       description: 'Find and track the keywords that bring you qualified leads',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/SEO-Keyword-Research-Template.xlsx'
     },
     {
       id: 7,
