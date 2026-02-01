@@ -838,7 +838,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
   // ResourcesPage Component
   function ResourcesPage({ selectedStage, setSelectedStage, selectedTopic, setSelectedTopic, resources, stages, topics }) {
     const filteredResources = resources.filter(resource => {
-      const stageMatch = resource.stage.includes(selectedStage);
+      const stageMatch = resource.stage && resource.stage.includes(selectedStage);
       const topicMatch = selectedTopic === 'all' || resource.topic === selectedTopic;
       return stageMatch && topicMatch;
     });
