@@ -436,7 +436,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
                 </div>
                 <h3 className="text-xl font-bold mb-3">Checklists & Templates</h3>
                 <p className="text-slate-600">
-                  Battle-tested frameworks for intake, marketing, operations, and more — ready to use today.
+                  Battle-tested frameworks for intake, marketing, operations, and more  ready to use today.
                 </p>
               </div>
 
@@ -470,7 +470,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
               </div>
               <h2 className="text-4xl font-bold mb-6">Need more than resources?</h2>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Get a dedicated Growth Counsel — your personal advisor who knows your firm, your market, and exactly what moves the needle.
+                Get a dedicated Growth Counsel  your personal advisor who knows your firm, your market, and exactly what moves the needle.
               </p>
             </div>
 
@@ -491,7 +491,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
                 </div>
                 <h3 className="font-semibold mb-2">Execution Team</h3>
                 <p className="text-slate-400 text-sm">
-                  Your counsel brings the entire Pioneerly team — marketing, tech, operations — when you need them.
+                  Your counsel brings the entire Pioneerly team  marketing, tech, operations  when you need them.
                 </p>
               </div>
 
@@ -1375,7 +1375,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
                     in ways that actually work.
                   </p>
                   <p>
-                    These days, I focus on cutting through the noise and finding what actually moves the needle for law firms — 
+                    These days, I focus on cutting through the noise and finding what actually moves the needle for law firms  
                     whether that's rethinking your positioning, optimizing your funnel, or building systems that bring in cases consistently.
                   </p>
                 </div>
