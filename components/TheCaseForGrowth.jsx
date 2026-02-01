@@ -96,11 +96,11 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
     },
     {
       id: 7,
-      downloadUrl: '/downloads/Referral-Program-Playbook.pdf'
+      downloadUrl: '/downloads/Referral-Program-Playbook.pdf'
     },
     {
       id: 8,
-      downloadUrl: '/downloads/Social-Media-Content-Calendar.xlsx'
+      downloadUrl: '/downloads/Social-Media-Content-Calendar.xlsx'
     },
 
     // AI Resources
@@ -210,11 +210,11 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
     // Business Development
     {
       id: 20,
-      downloadUrl: '/downloads/Lead-Conversion-Playbook.pdf'
+      downloadUrl: '/downloads/Lead-Conversion-Playbook.pdf'
     },
     {
       id: 21,
-      downloadUrl: '/downloads/Consultation-Script-Template.pdf'
+      downloadUrl: '/downloads/Consultation-Script-Template.pdf'
     },
     {
       id: 22,
