@@ -130,7 +130,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'ai',
       description: '90-day plan to integrate AI into your firm without disrupting operations',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/AI-Implementation-Roadmap.pdf'
     },
     {
       id: 12,
@@ -139,7 +139,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid'],
       topic: 'ai',
       description: 'Templates for emails, status updates, and difficult conversations',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Client-Communication-AI-Prompts.pdf'
     },
     {
       id: 13,
@@ -148,7 +148,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'ai',
       description: 'Navigate bar rules and ethical considerations when using AI',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/AI-Ethics-Guide.pdf'
     },
 
     // Operations Resources
@@ -168,7 +168,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid'],
       topic: 'operations',
       description: 'Standard workflows for intake, discovery, trial prep, and closing',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Case-Management-Workflow.xlsx'
     },
     {
       id: 16,
@@ -177,7 +177,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'operations',
       description: 'Automate your most common documents and save 10+ hours per week',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Document-Automation-Templates.xlsx'
     },
     {
       id: 17,
@@ -186,7 +186,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'operations',
       description: 'Comprehensive policy for hybrid and remote team management',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Remote-Work-Policy.pdf'
     },
     {
       id: 18,
@@ -195,7 +195,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid'],
       topic: 'operations',
       description: 'Never miss billable hours with this daily tracking system',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Time-Tracking-Billing-Checklist.pdf'
     },
     {
       id: 19,
@@ -204,7 +204,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'operations',
       description: 'Improve client experience with secure document sharing and updates',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Client-Portal-Guide.pdf'
     },
 
     // Business Development
@@ -223,7 +223,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid'],
       topic: 'business',
       description: 'Track connections, follow-ups, and referrals from networking events',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Networking-Tracker.xlsx'
     },
     {
       id: 23,
@@ -241,7 +241,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['solo', 'mid'],
       topic: 'business',
       description: 'Prepare and deliver presentations that generate leads',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Speaking-Engagement-Kit.xlsx'
     },
 
     // Financial Resources
@@ -279,7 +279,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'financial',
       description: 'Comprehensive budget template with department breakdowns',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Annual-Budget-Template.xlsx'
     },
     {
       id: 29,
@@ -288,7 +288,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
       stage: ['mid', 'large'],
       topic: 'financial',
       description: 'Analyze profitability by practice area, attorney, and case type',
-      downloadUrl: '#'
+      downloadUrl: '/downloads/Profitability-Analysis.xlsx'
     },
     {
       id: 30,
