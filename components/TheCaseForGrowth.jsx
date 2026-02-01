@@ -303,7 +303,7 @@ const TheCaseForGrowth = ({ initialPage = 'home' }) => {
 
   // Filter resources
   const filteredResources = resources.filter(resource => {
-    const stageMatch = resource.stage.includes(selectedStage);
+    const stageMatch = resource.stage && resource.stage.includes(selectedStage);
     const topicMatch = selectedTopic === 'all' || resource.topic === selectedTopic;
     return stageMatch && topicMatch;
   });
